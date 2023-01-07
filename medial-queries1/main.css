@@ -12,6 +12,10 @@ body {
 }
 .container > div{
   height: 50px;
+  padding: 10px;
+  margin: 10px;
+  background-color: navy;
+  color: white;
 }
 
 .a{
