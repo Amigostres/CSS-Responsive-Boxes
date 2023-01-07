@@ -1,3 +1,37 @@
+*{
+  border: 1px solid magenta;
+}
 body {
   background: blanchedalmond;
+}
+
+.container{
+  background-color:ghostwhite;
+  display: flex;  
+  flex-wrap: wrap;  
+}
+.container > div{
+  height: 50px;
+}
+
+.a{
+  flex: 100%;
+  min-height: 150px;
+}
+.b{
+  min-height: 300px;
+  flex: 3;
+}
+.c{
+  flex: 1;
+  min-height: 300px;
+}
+@media (max-width: 600px) {
+  .container{
+    flex-direction: column;
+  }  
+  .c{
+    background-color: red;
+    min-height: 150px;
+  }
 }
