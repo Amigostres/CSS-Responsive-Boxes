@@ -1,15 +1,15 @@
-:root{
-  --flex-basis: 75%;
-}
+
 *{
   margin: 0;
   padding: 0;
 }
 body {
   background: papayawhip;
+  margin: 20px;
+  padding: 20px;
 }
 
-.container{
+/*.container{
   background-color: ghostwhite;
   display: flex;
   flex-wrap: wrap;
@@ -79,4 +79,60 @@ body {
     flex:1;
   }
 
+}*/
+
+
+/* decided to use grid instead */
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(4,24%);
+  gap: 20px;
+}
+.container div{
+  border:1px solid seagreen;
+  background-color: lightblue;
+  margin: 0;
+  font-size: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100px;
+  padding: 25px;
+  /* text-align: center; */
+}
+.a{
+  grid-row: 1;  /*this is defualt */
+  grid-column: span 4;
+}
+.b{
+  grid-row: 2;/*not needed because it does it for you*/
+  grid-column: span 3;
+}
+.c,.d,.e{
+  grid-row: 3
+}
+.f{
+  grid-row: 2;
+  grid-column: span 1;
+  grid-row:span 2;
+}
+
+@media (max-width: 600px) {
+  .container{
+    grid-template-columns: repeat(3,100px);
+  }
+  .a{
+    grid-column:span 3;
+  }
+  .b{
+    grid-column:span 3;
+    min-height:200px;
+  }
+  .f{
+    grid-row: 4;
+    grid-column:span 3;
+  }
+  
 }
