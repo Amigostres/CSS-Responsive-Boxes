@@ -5,7 +5,8 @@ body {
 }
 .container{
   display: grid;
-  grid-template-columns: repeat(4,135px);
+  justify-content: center; /* This can also work in a grid display */
+  grid-template-columns: repeat(4,23%);
   gap: 20px;
 }
 .container div{
@@ -44,7 +45,7 @@ align-items:center;
 }
 @media (max-width:600px){
   .container{
-    grid-template-columns:repeat(3,150px);
+    grid-template-columns:repeat(3,25%);
   }
   .container .a{
     min-height: 100px;
